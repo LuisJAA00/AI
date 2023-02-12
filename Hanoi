@@ -1,0 +1,15 @@
+h(N,S,E):-
+    N>1,
+    M is N-1,
+    Other is 2,
+    h(M,S,Other),
+
+    nl,write(S),
+    write('->'),
+    write(E),nl,
+
+    h(M,Other,E).
+
+h(1,S,E):-
+
+    nl,write(S),write('->'),write(E),nl.
